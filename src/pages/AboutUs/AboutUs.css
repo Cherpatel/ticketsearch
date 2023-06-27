@@ -1,0 +1,24 @@
+.about-us > .w-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding: 24px;
+
+    border-radius: var(--default-border-radius);
+    background-color: white;
+}
+
+.about-us > .w-info > h1 {
+    display: inline-block;
+
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.about-us > .w-info > p {
+    display: inline-block;
+
+    line-height: 24px;
+    font-size: 16px;
+}

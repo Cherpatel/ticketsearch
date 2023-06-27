@@ -1,0 +1,20 @@
+.faq > h1 {
+    display: inline-block;
+    width: 100%;
+    padding: 24px;
+    margin-bottom: 24px;
+
+    line-height: 32px;
+    font-size: 32px;
+    font-weight: 500;
+
+    border-radius: var(--default-border-radius);
+    background-color: white;
+}
+
+.faq > .w-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}

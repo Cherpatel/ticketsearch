@@ -1,0 +1,128 @@
+.select {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+    height: 42px;
+
+    cursor: pointer;
+}
+
+.select > .area {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 16px;
+    border: 1px solid #E1E3E6;
+
+    border-radius: var(--default-border-radius);
+    background-color: white;
+
+    user-select: none;
+}
+
+.select.active > .area {
+    outline: 1px auto #FF5500;
+}
+
+.select > .area > .w-value {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+}
+
+.select > .area > .w-value > span {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    line-height: 20px;
+    font-family: SFProText;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #999FA6;
+}
+
+.select.selected > .area > .w-value > span,
+.select.active > .area > .w-value > span {
+    color: inherit;
+}
+
+.select > .area > .w-icon {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
+.select > .area > .w-arrow {
+    --arrow-fill: #999FA6;
+
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
+.select > .accordion {
+    position: absolute;
+    top: calc(100% + 4px);
+    z-index: 10;
+
+    width: 100%;
+    padding: 8px;
+
+    border-radius: 0 0 var(--default-border-radius) var(--default-border-radius);
+    box-shadow: 0px 10px 22px -4px #1B1F231F;
+    background-color: white;
+    transform: translateY(-50px) scale(0.95);
+    opacity: 0;
+
+    transition: opacity var(--default-transition), transform var(--default-transition);
+
+    pointer-events: none;
+}
+
+.select.active > .accordion {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+
+    pointer-events: all;
+}
+
+.select > .accordion > .item {
+    overflow: hidden;
+
+    width: 100%;
+    height: 42px;
+    padding: 12px;
+
+    background-color: white;
+
+    user-select: none;
+}
+
+.select > .accordion > .item:hover {
+    background-color: #F8F8F8;
+}
+
+.select > .accordion > .item > span {
+    overflow: hidden;
+
+    display: inline-block;
+    width: 100%;
+
+    line-height: 20px;
+    font-family: SFProText;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

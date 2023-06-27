@@ -1,0 +1,26 @@
+.button {
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.button.add rect,
+.button.remove rect {
+    fill: #FF5500;
+}
+
+.button:not(.reject):hover rect,
+.button.reject:hover path {
+    fill: #E94E00;
+} 
+
+.button.disabled {
+    cursor: default;
+
+    pointer-events: none;
+}
+
+.button.add.disabled rect,
+.button.remove.disabled rect {
+    fill: #FFA375 !important;
+}

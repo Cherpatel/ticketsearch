@@ -1,0 +1,13 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: var(--footer-height);
+    padding: 31.5px 32px;
+
+    background-color: var(--gray);
+}
+
+footer > a {
+    color: white;
+}

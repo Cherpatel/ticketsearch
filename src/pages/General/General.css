@@ -1,0 +1,61 @@
+.general {
+    position: relative;
+
+    display: flex;
+    gap: 23px;
+}
+
+/* Filters start */
+
+.general > .w-filters {
+    position: sticky;
+    top: calc(var(--header-height) + var(--vertical-padding));
+
+    flex: 1 1 408px;
+    height: calc(100vh - var(--header-height) - var(--footer-height) - 2 * var(--vertical-padding));
+    padding: 24px;
+
+    border-radius: var(--default-border-radius);
+    background-color: white;
+}
+
+.general > .w-filters > h2 {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.general > .w-filters > .b-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.general > .w-filters > .b-filters > .filter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.general > .w-filters > .b-filters > .filter > .title {
+    line-height: 20px;
+    font-family: SFProText;
+    font-size: 14px;
+}
+
+/* Filters end */
+
+.general > .w-films {
+    flex: 1 1 1424px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 168px;
+    row-gap: 16px;
+    height: fit-content;
+}

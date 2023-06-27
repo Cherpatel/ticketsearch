@@ -1,0 +1,69 @@
+.w-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+
+    backdrop-filter: brightness(85%);
+
+    animation: appear 0.3s;
+
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.modal {
+    position: relative;
+
+    width: fit-content;
+    padding: 24px;
+    margin: auto;
+
+    border-radius: var(--default-border-radius);
+    background-color: white;
+
+    animation: slide-in 0.3s;
+
+    cursor: default;
+}
+
+.modal > .close {
+    position: absolute;
+    inset: 26px 24px auto auto;
+
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+
+.modal > .close > svg {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}

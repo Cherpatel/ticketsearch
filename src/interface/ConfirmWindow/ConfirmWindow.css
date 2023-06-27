@@ -1,0 +1,34 @@
+.win-confirm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: fit-content
+}
+
+.win-confirm > .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.win-confirm > .desc > .title {
+    display: inline-block;
+
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.win-confirm > .desc > .text {
+    display: inline-block;
+
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.win-confirm > .btns {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
